@@ -1,33 +1,48 @@
 
 #include"ft_printf.h"
 
-int	count(unsigned int s)
+int	ft_num_len(unsigned	int num)
 {
-	int	i;
+	int	len;
 
-    i = 0;
-	while (s)
+	len = 0;
+	while (num != 0)
 	{
-		s /= 10;
-		i++;
+		len++;
+		num = num / 10;
 	}
-	return (i);
+	return (len);
 }
 
-void printun(unsigned int num)
+char	*ft_uitoa(unsigned int n)
 {
-    int i;
-    char *c;
+	char	*num;
+	int		len;
 
-    i = count(num) + 1;
-    c = (char *)malloc(i);
-    c[i--] = '\0';
-    while (num)
-    {
-        c[i] = num % 10 + '0';
-        num /= 10;
-    }
-    while (*c)
-        write (1, c++, 1);
-    free (c);
+	len = ft_num_len(n);
+	num = (char *)malloc(sizeof(char) * (len + 1));
+	if (!num)
+		return (0);
+	num[len] = '\0';
+	while (n != 0)
+	{
+		num[len - 1] = n % 10 + '0';
+		n = n / 10;
+		len--;
+	}
+	return (num);
+}
+
+void	printun(unsigned int n)
+{
+	char	*num;
+
+	if (n == 0)
+		write(1, "0", 1);
+	else
+	{
+		num = ft_uitoa(n);
+		ft_putstr_fd(num, 2);
+		free(num);
+	}
 }

@@ -5,8 +5,8 @@ void    printshit(int a, char format)
 {
     if (a >= 16)
     {
-        printshit(a / 10, format);
-        printshit(a % 10, format);
+        printshit(a / 16, format);
+        printshit(a % 16, format);
     }
     else
     {
