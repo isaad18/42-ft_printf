@@ -1,4 +1,3 @@
-
 #ifndef FT_PRINTF_H
 #define FT_PRINTF_H
 
@@ -13,14 +12,14 @@ void	ft_putnbr_fd(int nb, int fd);
 
 void	ft_putchar_fd(char c, int fd);
 
-void    printhexa(int a, char format);
+void	printhexa(int a, char format);
 
-void    printptr(unsigned long int num);
+void	printptr(unsigned long int num);
 
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 
-int    ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...);
 
-void printun(unsigned int num);
+void	printun(unsigned int num);
 
 #endif

@@ -1,11 +1,10 @@
-
 #include"printf.h"
 #include<unistd.h>
 
 void	ft_putnbr_fd(int nb, int fd)
 {
 	unsigned int	nbr;
-	char i;
+	char	i;
 
 	if (nb < 0)
 	{
