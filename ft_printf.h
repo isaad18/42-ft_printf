@@ -1,25 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/27 11:58:11 by isaad             #+#    #+#             */
+/*   Updated: 2022/01/28 13:38:17 by isaad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include<unistd.h>
-#include<stdlib.h>
-#include<stdio.h>
-#include<stdarg.h>
+# include<unistd.h>
+# include<stdlib.h>
+# include<stdio.h>
+# include<stdarg.h>
 
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putstr_fd(char *s, int fd);
 
-void	ft_putnbr_fd(int nb, int fd);
+int		ft_putnbr_fd(int nb, int fd);
 
-void	ft_putchar_fd(char c, int fd);
+int		ft_putchar_fd(char c, int fd);
 
-void	printhexa(int a, char format);
+int		printhexa(int a, char format);
 
-void	printptr(unsigned long int num);
+int		printptr(unsigned long int num);
 
 int		ft_atoi(const char *str);
 
 int		ft_printf(const char *str, ...);
 
-void	printun(unsigned int num);
+int		printun(unsigned int num);
 
 #endif

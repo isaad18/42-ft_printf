@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   printun.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/27 12:00:25 by isaad             #+#    #+#             */
+/*   Updated: 2022/01/28 14:01:30 by isaad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include"ft_printf.h"
 
 int	ft_num_len(unsigned	int num)
@@ -32,16 +44,19 @@ char	*ft_uitoa(unsigned int n)
 	return (num);
 }
 
-void	printun(unsigned int n)
+int	printun(unsigned int n)
 {
 	char	*num;
+	int		nb;
 
+	nb = 0;
 	if (n == 0)
-		write(1, "0", 1);
+		nb += write (1, "0", 1);
 	else
 	{
 		num = ft_uitoa(n);
-		ft_putstr_fd(num, 2);
+		nb += ft_putstr_fd(num, 2);
 		free(num);
 	}
+	return (nb);
 }

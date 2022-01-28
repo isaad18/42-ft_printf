@@ -1,43 +1,74 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/27 11:58:44 by isaad             #+#    #+#             */
+/*   Updated: 2022/01/28 14:00:22 by isaad            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-void	ft_format(va_list args, char format)
+int	ft_format(va_list args, char format)
 {
+	int	nb;
+
+	nb = 0;
 	if (format == 'c')
-		ft_putchar_fd(va_arg(args, int), 1);
+		nb += ft_putchar_fd(va_arg(args, int), 1);
 	if (format == 's')
-		ft_putstr_fd(va_arg(args, char *), 1);
+		nb += ft_putstr_fd(va_arg(args, char *), 1);
 	if (format == 'p')
-		printptr(va_arg(args, unsigned long int));
+		nb += printptr(va_arg(args, unsigned long int));
 	if (format == 'd' || format == 'i')
-		ft_putnbr_fd(va_arg(args, long int), 1);
+		nb += ft_putnbr_fd(va_arg(args, long int), 1);
 	if (format == 'x')
-		printhexa(va_arg(args, long int), 'x');
+		nb += printhexa(va_arg(args, long int), 'x');
 	if (format == 'X')
-		printhexa(va_arg(args, long int), 'X');
+		nb += printhexa(va_arg(args, long int), 'X');
 	if (format == 'u')
-		printun(va_arg(args, unsigned int));
+		nb += printun(va_arg(args, unsigned int));
 	if (format == '%')
-		write (1, "%", 1);
+	{
+		nb += write (1, "%", 1);
+		return (1);
+	}
+	return (nb);
 }
 
 int	ft_printf(const char *str, ...)
 {
 	int		i;
 	va_list	args;
+	int		nb;
 
 	i = 0;
+	nb = 0;
 	va_start(args, str);
 	while (str[i])
 	{
 		if (str[i] == '%')
 		{
-			ft_format(args, str[i + 1]);
+			nb += ft_format(args, str[i + 1]);
 			i++;
 		}
 		else
-			ft_putchar_fd(str[i], 1);
+			nb += ft_putchar_fd(str[i], 1);
 		i++;
 	}
 	va_end(args);
-	return (0);
+	return (nb);
 }
+
+// int	main(void)
+// {
+// //	int		n;
+// //	char	*j;
+
+// //	j = "lkj";
+// 	ft_printf("\n%d\n", ft_printf("%u", 872345678));
+// 	printf("\n%d", printf("%u", 872345678));
+// }
