@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
+/*   By: isaad <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 11:59:25 by isaad             #+#    #+#             */
-/*   Updated: 2022/01/28 08:36:59 by isaad            ###   ########.fr       */
+/*   Created: 2022/01/30 09:41:08 by isaad             #+#    #+#             */
+/*   Updated: 2022/01/30 09:41:21 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ int	ft_putnbr_fd(int nb, int fd)
 	unsigned int	nbr;
 	char			i;
 
+	if (nb == 0)
+	{
+		write (fd, "0", 1);
+		return (1);
+	}
 	if (nb < 0)
 	{
 		write (1, "-", 1);

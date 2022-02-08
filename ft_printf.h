@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
+/*   By: isaad <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 11:58:11 by isaad             #+#    #+#             */
-/*   Updated: 2022/01/28 13:38:17 by isaad            ###   ########.fr       */
+/*   Created: 2022/01/30 09:42:18 by isaad             #+#    #+#             */
+/*   Updated: 2022/01/30 09:42:23 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		ft_putnbr_fd(int nb, int fd);
 
 int		ft_putchar_fd(char c, int fd);
 
-int		printhexa(int a, char format);
+int		printhexa(unsigned int a, char format);
 
 int		printptr(unsigned long int num);
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printhexa.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
+/*   By: isaad <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 12:00:38 by isaad             #+#    #+#             */
-/*   Updated: 2022/01/28 13:38:09 by isaad            ###   ########.fr       */
+/*   Created: 2022/01/30 09:42:53 by isaad             #+#    #+#             */
+/*   Updated: 2022/01/30 09:42:57 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_len(unsigned	int num)
 	return (len);
 }
 
-void	printshit(int a, char format)
+void	printshit(unsigned int a, char format)
 {
 	if (a >= 16)
 	{
@@ -46,7 +46,7 @@ void	printshit(int a, char format)
 	}
 }
 
-int	printhexa(int a, char format)
+int	printhexa(unsigned int a, char format)
 {
 	if (a == 0)
 	{

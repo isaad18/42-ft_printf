@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 11:58:44 by isaad             #+#    #+#             */
-/*   Updated: 2022/01/28 14:00:22 by isaad            ###   ########.fr       */
+/*   Created: 2022/01/30 09:41:44 by isaad             #+#    #+#             */
+/*   Updated: 2022/01/30 11:33:48 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	ft_format(va_list args, char format)
 	if (format == 'd' || format == 'i')
 		nb += ft_putnbr_fd(va_arg(args, long int), 1);
 	if (format == 'x')
-		nb += printhexa(va_arg(args, long int), 'x');
+		nb += printhexa(va_arg(args, unsigned long int), 'x');
 	if (format == 'X')
-		nb += printhexa(va_arg(args, long int), 'X');
+		nb += printhexa(va_arg(args, unsigned long int), 'X');
 	if (format == 'u')
 		nb += printun(va_arg(args, unsigned int));
 	if (format == '%')
@@ -69,6 +69,6 @@ int	ft_printf(const char *str, ...)
 // //	char	*j;
 
 // //	j = "lkj";
-// 	ft_printf("\n%d\n", ft_printf("%u", 872345678));
-// 	printf("\n%d", printf("%u", 872345678));
+// 	ft_printf("\n%d\n", ft_printf("%x", -1));
+// 	printf("\n%d", printf("%x", -1));
 // }

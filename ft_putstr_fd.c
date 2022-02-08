@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
+/*   By: isaad <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 11:59:05 by isaad             #+#    #+#             */
-/*   Updated: 2022/01/28 02:38:59 by isaad            ###   ########.fr       */
+/*   Created: 2022/01/30 09:42:38 by isaad             #+#    #+#             */
+/*   Updated: 2022/01/30 09:42:41 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@ int	ft_putstr_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
+	if (s == NULL)
+	{
+		write (fd, "(null)", 6);
+		return (6);
+	}
 	if (!s)
 		return (0);
 	while (*s)

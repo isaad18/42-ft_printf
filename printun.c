@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printun.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
+/*   By: isaad <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/27 12:00:25 by isaad             #+#    #+#             */
-/*   Updated: 2022/01/28 14:01:30 by isaad            ###   ########.fr       */
+/*   Created: 2022/01/30 09:43:05 by isaad             #+#    #+#             */
+/*   Updated: 2022/01/30 09:43:08 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ int	printun(unsigned int n)
 	else
 	{
 		num = ft_uitoa(n);
-		nb += ft_putstr_fd(num, 2);
+		nb += ft_putstr_fd(num, 1);
 		free(num);
 	}
 	return (nb);
