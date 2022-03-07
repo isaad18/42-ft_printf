@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-RCS	= ft_atoi.c	ft_putchar_fd.c	ft_putstr_fd.c	printhexa.c \
+RCS	= ft_putchar_fd.c	ft_putstr_fd.c	printhexa.c \
 printptr.c	ft_printf.c	ft_putnbr_fd.c	printun.c \
 
 OBJS	= $(RCS:.c=.o)
