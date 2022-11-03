@@ -6,12 +6,12 @@
 #    By: isaad <isaad@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/27 12:00:05 by isaad             #+#    #+#              #
-#    Updated: 2022/01/28 10:32:02 by isaad            ###   ########.fr        #
+#    Updated: 2022/11/03 11:34:50 by isaad            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-RCS	= ft_putchar_fd.c	ft_putstr_fd.c	printhexa.c \
-printptr.c	ft_printf.c	ft_putnbr_fd.c	printun.c \
+RCS	= ./src/ft_putchar_fd.c	./src/ft_putstr_fd.c	./src/printhexa.c \
+./src/printptr.c	./src/ft_printf.c	./src/ft_putnbr_fd.c	./src/printun.c \
 
 OBJS	= $(RCS:.c=.o)
 

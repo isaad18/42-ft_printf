@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isaad <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: isaad <isaad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/30 09:41:08 by isaad             #+#    #+#             */
-/*   Updated: 2022/01/30 09:41:21 by isaad            ###   ########.fr       */
+/*   Updated: 2022/11/03 11:33:35 by isaad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"printf.h"
+#include"../includes/ft_printf.h"
 #include<unistd.h>
 
 int	ftlen(int nb)
